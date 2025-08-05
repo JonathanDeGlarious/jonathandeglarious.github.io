@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>eggshop</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Luxurious+Roman&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/nightmode.js"></script>
+
+  </head>
+
+  <body>
+  <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="subscribe.html">Get a subscription</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <button id="night-mode-toggle">Night Mode</button>
+    <p>Someone else should write this</p>
+  </body>
+  <script>
+  const toggleButton = document.getElementById("night-mode-toggle");
+
+  // Check for saved mode in localStorage
+  const nightMode = localStorage.getItem("nightMode");
+
+  if (nightMode === "enabled") {
+    document.body.classList.add("night-mode");
+    toggleButton.textContent = " Light Mode";
+  }
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("night-mode");
+
+    if (document.body.classList.contains("night-mode")) {
+      localStorage.setItem("nightMode", "enabled");
+      toggleButton.textContent = " Light Mode";
+    } else {
+      localStorage.setItem("nightMode", "disabled");
+      toggleButton.textContent = " Night Mode";
+    }
+  });
+</script>
+
+</html>

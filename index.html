@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>eggshop</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Luxurious+Roman&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+ 
+
+  </head>
+
+  <body>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="subscribe.html">Get a subscription</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <button id="night-mode-toggle">Night Mode</button>
+
+    <!-- this is the start of content -->
+
+    <p class="lora">
+      Never run out of eggs again! With our eggs, you can have fresh,
+      high-quality eggs on a schedule that works for you. Whether you’re a
+      casual cook or a breakfast enthusiast, our service ensures you always have
+      the freshest eggs available, without having to worry about supplies.
+    </p>
+
+    <p class="luxurious">Choose Your Plan</p>
+    <p class="lora">
+      Select the perfect plan based on how many eggs you need and how often
+      you'd like to pick them up. From a dozen a week to a full month’s supply,
+      we’ve got you covered!
+    </p>
+
+    <p class="lora">
+      Need to adjust your plan or skip a pickup? No problem. Manage your
+      subscription with ease and make changes anytime.
+    </p>
+
+    <p class="luxurious">
+      Sustainably Sourced
+      <br />
+    </p>
+    <p class="lora">
+      We’re committed to ethical farming practices. We treat our hens with the
+      utmost care. Plus, our eco-friendly packaging helps reduce waste.
+    </p>
+    <br />
+    <h1 class="cookie">Why Choose Us?</h1>
+    <p class="luxurious">Freshness Guaranteed</p>
+    <p class="lora">
+      <br />We have farm-fresh eggs,immedietly refrigerated, from free range
+      chickens, ensuring top-quality, flavorful eggs.
+    </p>
+
+    <p class="luxurious">Great Value<br/></p>
+    <p class="lora">
+      Save time and money with our affordable subscription options and regular
+      discounts.
+    </p>
+
+    <p class="luxurious">Support Local</p>
+    <p class="lora">
+      <br/>
+      By subscribing, you’re supporting ethical farming practices and
+      sustainable sourcing.
+    </p>
+
+    <h1 class="cookie">Sign Up Today and Get Your Fresh Eggs Delivered!</h1>
+       <script src="/nightmode.js"></script>
+  <script>
+  const toggleButton = document.getElementById("night-mode-toggle");
+
+  // Check for saved mode in localStorage
+  const nightMode = localStorage.getItem("nightMode");
+
+  if (nightMode === "enabled") {
+    document.body.classList.add("night-mode");
+    toggleButton.textContent = " Light Mode";
+  }
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("night-mode");
+
+    if (document.body.classList.contains("night-mode")) {
+      localStorage.setItem("nightMode", "enabled");
+      toggleButton.textContent = " Light Mode";
+    } else {
+      localStorage.setItem("nightMode", "disabled");
+      toggleButton.textContent = " Night Mode";
+    }
+  });
+</script>
+
+  </body>
+</html>
