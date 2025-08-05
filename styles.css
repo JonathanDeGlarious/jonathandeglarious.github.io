@@ -1,0 +1,282 @@
+/* === Typography Classes === */
+
+.lora {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.luxurious {
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cookie {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+.black {
+  color: black;
+}
+
+/* === Base Styles === */
+
+body {
+  margin: 10px 100px;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+h1, h2, h3 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* === Navbar === */
+
+ul, .navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  padding: 14px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ff9900;
+  border-radius: 5px;
+}
+
+/* === Night Mode Toggle Button === */
+
+#night-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #444444;
+  color: #ffffff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#night-mode-toggle:hover {
+  background-color: #666666;
+}
+
+/* === Mobile Adjustments === */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  #night-mode-toggle {
+    position: static;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
+/* === Forms: Subscription & Payment === */
+
+.subscription-form,
+.payment-form {
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+}
+
+.subscription-form {
+  border: 2px solid #cccccc;
+}
+
+.payment-form {
+  border: 1px solid #cccccc;
+  background-color: #f4f4f4;
+}
+
+.subscription-form fieldset,
+.payment-form fieldset {
+  border: none;
+}
+
+.subscription-form legend,
+.payment-form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.subscription-form label,
+.payment-form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.payment-form label {
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+.payment-form input[type="text"] {
+  width: 100%;
+  padding: 0.1em;
+  font-size: 1em;
+  margin-top: 0.1em;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 1px;
+}
+
+.card-details-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.card-details-row div {
+  flex: 1;
+}
+
+.submit-button {
+  margin-top: 1.5em;
+  padding: 0.75em 1.5em;
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #cc7a00;
+}
+
+/* === Form Fieldsets === */
+
+fieldset {
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 2px solid #cccccc;
+  margin: 1.5em auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow: visible;
+  position: relative;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5em;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Night Mode Styles === */
+
+body.night-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.night-mode .navbar a {
+  color: #e0e0e0;
+}
+
+body.night-mode .navbar a:hover {
+  background-color: #333333;
+}
+
+body.night-mode .black {
+  color: #ffffff;
+}
+
+body.night-mode input,
+body.night-mode select,
+body.night-mode textarea {
+  background-color: #222222;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+body.night-mode fieldset {
+  background-color: #1a1a1a;
+  border: 1px solid #444444;
+  color: #ffffff;
+}
+
+body.night-mode legend {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+body.night-mode label {
+  color: #dddddd;
+}
+
+body.night-mode .submit-button {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+body.night-mode .submit-button:hover {
+  background-color: #444444;
+}
