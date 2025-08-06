@@ -280,3 +280,13 @@ body.night-mode .submit-button {
 body.night-mode .submit-button:hover {
   background-color: #444444;
 }
+/* Regular link style */
+a {
+  color: blue; /* or your default light mode color */
+}
+
+/* Night mode link style */
+.night-mode a {
+  color: white;
+}
+
