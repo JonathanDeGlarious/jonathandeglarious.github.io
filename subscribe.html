@@ -93,6 +93,25 @@
     
         <script src="/nightmode.js"></script>
   </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+      // Desktop detected — override links
+      const oneMonthLink = document.querySelector('a[href^="venmo://"][href*="amount=17"]');
+      const threeMonthLink = document.querySelector('a[href^="venmo://"][href*="amount=50"]');
+
+      if (oneMonthLink) {
+        oneMonthLink.href = "1month.html";
+      }
+
+      if (threeMonthLink) {
+        threeMonthLink.href = "3month.html";
+      }
+    }
+  });
+</script>
 
 
 </html>
